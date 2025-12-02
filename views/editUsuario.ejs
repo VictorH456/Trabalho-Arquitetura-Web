@@ -8,6 +8,8 @@
     <h1>Editar Usuário</h1>
     
     <form action="/users/update/<%= user._id %>" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            
         <div>
             <label>Nome:</label>
             <input type="text" name="nome_usuario" value="<%= user.nome %>" required>

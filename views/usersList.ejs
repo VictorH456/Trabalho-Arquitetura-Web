@@ -38,6 +38,8 @@
                     </a>
 
                     <form action="/users/delete/<%= user._id %>" method="POST" style="display:inline;">
+                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            
                         <button type="submit" style="color: red;">🗑️ Excluir</button>
                     </form>
                 </div>

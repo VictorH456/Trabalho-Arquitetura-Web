@@ -13,6 +13,7 @@
         <% } %>
 
         <form action="/register" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             
             <label for="nome"><b>Nome:</b></label>
             <input type="text" placeholder="Seu Nome Completo" name="nome" required>
